@@ -16,10 +16,11 @@
       display: grid;
       grid-gap: 1rem;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 5fr 5fr;
+      grid-template-rows: .2fr 1fr .1fr;
       grid-template-areas:
-          "top top top left"
-          "middle middle middle right";
+          "top top top top"
+          "left left right right"
+          "left left bottom bottom";
     }
   
     container > * {
@@ -27,21 +28,21 @@
     }
   
     header {
-      grid-area: right;
+      grid-area: top;
       background-color: rgb(84, 138, 255);
     }
   
     main {
-      grid-area: top;
+      grid-area: left;
       background-color: rgb(255, 235, 58);
     }
   
     nav {
-      grid-area: left;
+      grid-area: right;
       background-color: rgb(255, 63, 69);
     }
   
     footer {
-      grid-area: middle;
+      grid-area: bottom;
       background-color: rgb(113, 111, 108);
     }

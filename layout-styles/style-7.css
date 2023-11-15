@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+  }
+  
+    body {
+      min-height: 96vh;
+      display: flex;
+      margin: 1rem;
+    }
+  
+    container {
+      margin: 0 auto;
+      --max-width: 50rem;
+      width: min(100%, var(--max-width));
+      font-family: sans-serif;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-rows: .2fr 1fr .1fr;
+      grid-template-areas:
+          "right top top top"
+          "right middle middle middle"
+          "right bottom bottom bottom";
+    }
+  
+    container > * {
+      padding: 1em;
+    }
+  
+    header {
+      grid-area: top;
+      background-color: rgb(84, 138, 255);
+    }
+  
+    main {
+      grid-area: middle;
+      background-color: rgb(255, 235, 58);
+    }
+  
+    nav {
+      grid-area: right;
+      background-color: rgb(255, 63, 69);
+    }
+  
+    footer {
+      grid-area: bottom;
+      background-color: rgb(113, 111, 108);
+    }
